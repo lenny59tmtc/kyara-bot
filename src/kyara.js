@@ -114,10 +114,12 @@ async function searchPlayer(query, discordId = null) {
 /**
  * Fetch a Kyara player profile by UUID. Returns profile object or null.
  */
-async function getProfile(id) {
+async function getProfile(id, force = false) {
   const key = String(id);
-  const cached = cacheGet(profileCache, key, PROFILE_TTL_MS);
-  if (cached !== null) return cached;
+  if (!force) {
+    const cached = cacheGet(profileCache, key, PROFILE_TTL_MS);
+    if (cached !== null) return cached;
+  }
 
   try {
     const data = await fetchJson(`/users/${encodeURIComponent(id)}`);

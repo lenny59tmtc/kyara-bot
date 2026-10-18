@@ -20,7 +20,7 @@ async function syncAll() {
 
     const results = await mapLimit(mappings, 5, async ({ kyaraId }) => {
       try {
-        const profile = await getProfile(kyaraId);
+        const profile = await getProfile(kyaraId, true);
         if (!profile || !profile.pseudo) return null;
 
         return {
