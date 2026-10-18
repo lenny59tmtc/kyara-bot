@@ -15,6 +15,7 @@ if (!DISCORD_TOKEN || !CLIENT_ID) {
 const commands = [
   require('./src/commands/suceur'),
   require('./src/commands/sync'),
+  require('./src/commands/classement'),
 ];
 
 async function deployCommands() {
