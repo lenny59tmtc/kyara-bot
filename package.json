@@ -1,7 +1,7 @@
 {
   "name": "kyara-suceur-bot",
   "version": "1.0.0",
-  "description": "Bot Discord - classement suceur Kyara (ratio boosters/mythiques)",
+  "description": "Bot Discord - classements Kyara (cartes, mythiques, ratio boosters/mythiques)",
   "main": "index.js",
   "type": "commonjs",
   "engines": {

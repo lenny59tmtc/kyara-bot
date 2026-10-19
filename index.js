@@ -16,6 +16,7 @@ const commands = [
   require('./src/commands/suceur'),
   require('./src/commands/sync'),
   require('./src/commands/classement'),
+  require('./src/commands/classement-mythique'),
 ];
 
 async function deployCommands() {

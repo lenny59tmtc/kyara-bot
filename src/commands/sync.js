@@ -21,7 +21,11 @@ module.exports = {
 
     const lines = data.map((r, i) => {
       const ratio = isFinite(r.ratio) ? r.ratio.toFixed(1) : '∞';
-      return `${i + 1}. **${r.pseudo}** — ${r.mythics}📱 · ${r.boostersOpened}🎲 · ratio ${ratio}`;
+      const cards = Number(r.owned || 0).toLocaleString('fr-FR');
+      return (
+        `${i + 1}. **${r.pseudo}** — ${cards}🃏 · ${r.mythics}📱 · ` +
+        `${r.boostersOpened}🎲 · ratio ${ratio}`
+      );
     });
 
     return interaction.editReply(

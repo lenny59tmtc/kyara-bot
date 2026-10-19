@@ -27,6 +27,7 @@ async function syncAll() {
           id: profile.id,
           pseudo: profile.pseudo,
           avatar: profile.avatar,
+          owned: profile.owned || 0,
           mythics: profile.mythics || 0,
           boostersOpened: profile.boostersOpened || 0,
           ratio:
